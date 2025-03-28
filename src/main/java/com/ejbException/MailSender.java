@@ -13,14 +13,12 @@ import java.util.Properties;
 public class MailSender {
 
     private final String smtpHost;
-    private final int smtpPort;
     private final String username;
     private final String password;
     private final boolean useTls;
 
-    public MailSender(String smtpHost, int smtpPort, String username, String password, boolean useTls) {
+    public MailSender(String smtpHost, String username, String password, boolean useTls) {
         this.smtpHost = smtpHost;
-        this.smtpPort = smtpPort;
         this.username = username;
         this.password = password;
         this.useTls = useTls;
@@ -91,13 +89,12 @@ public class MailSender {
     public static void main(String[] args) {
 
         String smtpHost = ""; // your host name
-        int smtpPort = 587; // your port name
         String username = ""; // your username
         String password = ""; // your password
         boolean useTls = true;
 
         MailSender mailSender = new MailSender(
-                smtpHost, smtpPort, username, password, useTls);
+                smtpHost, username, password, useTls);
 
         try {
             mailSender.sendEmailWithAttachment(
