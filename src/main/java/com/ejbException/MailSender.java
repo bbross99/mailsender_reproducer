@@ -90,10 +90,10 @@ public class MailSender {
 
     public static void main(String[] args) {
 
-        String smtpHost = "email-smtp.us-east-1.amazonaws.com";
-        int smtpPort = 587;
-        String username = "AKIAYR34IKKY3W4CR2W4";
-        String password = "BED9koHiwW5c9RVUPwzNcmpyNPHMeyUN/n/65FRG1+NL";
+        String smtpHost = ""; // your host name
+        int smtpPort = 587; // your port name
+        String username = ""; // your username
+        String password = ""; // your password
         boolean useTls = true;
 
         MailSender mailSender = new MailSender(
@@ -103,7 +103,7 @@ public class MailSender {
             mailSender.sendEmailWithAttachment(
                     "bbross@tomitribe.com",
                     "Test Email with Attachment",
-                    "This is a test email sent using Geronimo Mail with an attachment",
+                    "This is a test email sent with an attachment",
                     "src/main/resources/images/doe.jpg"
             );
         } catch (MessagingException e) {
